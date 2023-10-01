@@ -74,8 +74,8 @@ export default function Page() {
         <StyledBoxContainer display='flex' flexDirection='row'>
           {specialties.map((e, i) => (
             <>
-              <Specialty {...e} />
-              {(i < specialties.length - 1) && <Divider style={{ height: '50%' }} variant='middle' orientation='vertical' />}
+              <Specialty key={`${i}-specialty`} {...e} />
+              {(i < specialties.length - 1) && <Divider key={`${i}-specialty-divider`} style={{ height: '50%' }} variant='middle' orientation='vertical' />}
             </>
           ))}
         </StyledBoxContainer>
