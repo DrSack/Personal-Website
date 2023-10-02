@@ -47,6 +47,13 @@ export default function Page() {
       title: 'NOSIM',
       message: 'message',
       onClick: () => { }
+    },
+    {
+      image: '',
+      alt: 'NOSIM',
+      title: 'NOSIM',
+      message: 'message',
+      onClick: () => { }
     }
   ]
 

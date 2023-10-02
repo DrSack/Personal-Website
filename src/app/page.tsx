@@ -19,7 +19,18 @@ const StyledBoxContainer = styled(Box)(({ theme }) => ({
 }));
 
 const StyledDescriptionBox1 = styled(Box)(({ theme }) => ({
-
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  [theme.breakpoints.down('md')]: {
+    height: '50vh',
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: '40vh',
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: '40vh',
+  }
 }));
 
 const StyledDescriptionBox2 = styled(Box)(({ theme }) => ({
@@ -29,7 +40,7 @@ const StyledDescriptionBox2 = styled(Box)(({ theme }) => ({
   gap: theme.spacing(8),
   width: '800px',
   [theme.breakpoints.down('md')]: {
-    marginTop: 0,
+    marginTop: '36px',
     width: '100%',
   }
 }));
@@ -38,8 +49,16 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 240,
   height: 240,
   [theme.breakpoints.down('md')]: {
-    width: 200,
-    height: 200,
+    width: 320,
+    height: 320,
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: 240,
+    height: 240,
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: 240,
+    height: 240,
   }
 }));
 

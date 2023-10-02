@@ -36,7 +36,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <Box>
+    <Box padding={2}>
       <Toolbar style={{ color: 'black', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
         <Box gap={2} onClick={() => router.push('/')} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
           <TextSnippet />

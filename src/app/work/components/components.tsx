@@ -15,6 +15,7 @@ interface CardSelectableListProps {
 const StyledCardListBox = styled(Box)(({ theme }) => ({
   width: '80%',
   marginTop: theme.spacing(25),
+  marginBottom: theme.spacing(25),
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -28,6 +29,7 @@ const StyledCardListBox = styled(Box)(({ theme }) => ({
 
 const StyledCardListGrid = styled(Grid)(({ theme }) => ({
   flexDirection: "row",
+  width: '100%',
   [theme.breakpoints.down('sm')]: {
     flexDirection: "column",
     alignItems: "center",
@@ -37,14 +39,19 @@ const StyledCardListGrid = styled(Grid)(({ theme }) => ({
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 350,
+  width: 350,
+  [theme.breakpoints.down('md')]: {
+    minWidth: 240,
+    maxWidth: 350,
+  },
   [theme.breakpoints.down('sm')]: {
-    minWidth: 250,
+    minWidth: 350,
   }
 }))
 
 export const CardSelectable = ({ image, alt, title, message, onClick }: CardSelectableProps) => {
   return (
-    <StyledCard sx={{ maxWidth: 350, minWidth: 225 }}>
+    <StyledCard>
       <CardActionArea onClick={onClick}>
         <CardMedia
           component="img"
@@ -68,9 +75,9 @@ export const CardSelectable = ({ image, alt, title, message, onClick }: CardSele
 export const CardList = ({ items }: CardSelectableListProps) => {
   return (
     <StyledCardListBox>
-      <StyledCardListGrid spacing={16} container>
+      <StyledCardListGrid spacing={8} container>
         {items.map((e, i) => (
-          <Grid key={`${i}-skill-set-grid-item`} item xs={12} sm={6} md={4}>
+          <Grid display='flex' alignItems='center' justifyContent='center' key={`${i}-skill-set-grid-item`} item xs={12} sm={6} md={4}>
             <CardSelectable key={`${i}-skill-set-item`} {...e} />
           </Grid>
         ))}

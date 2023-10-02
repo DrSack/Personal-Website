@@ -1,10 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { Header } from '../../components/header'
 import { Theme } from '../../components/theme';
-
-const inter = Inter({ subsets: ['latin'] })
+import { Footer } from '../../components/footer';
 
 export const metadata: Metadata = {
   title: 'Welcome to My Portfolio',
@@ -19,10 +17,9 @@ export default function RootLayout({
   return (
     <html>
       <Theme>
-        <body className={inter.className}>
-            <Header />
-            {children}
-        </body>
+          <Header />
+          <div style={{minHeight: '100vh'}}>{children}</div>
+          <Footer />
       </Theme>
     </html>
   )
