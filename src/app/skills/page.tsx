@@ -1,7 +1,7 @@
 'use client'
 
 import { Build, FormatPaint, ViewQuilt } from "@mui/icons-material";
-import { Box, Divider, Slide, styled, Typography } from "@mui/material"
+import { Box, Divider, Grid, Slide, styled, Typography } from "@mui/material"
 import React from "react";
 import { useEffect, useState } from "react";
 import { DynamoDbLogo } from "../../../components/customIcons/DynamoDbLogo";
@@ -14,14 +14,11 @@ import { ReactLogo } from "../../../components/customIcons/ReactLogo";
 import { TypescriptLogo } from "../../../components/customIcons/TypescriptLogo";
 import { SkillSetColumnItem, Specialty } from "./components/components";
 
-const StyledBoxContainer = styled(Box)(({ theme }) => ({
+const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'center',
   alignItems: 'center',
-  gap: theme.spacing(30),
-  height: '50vh',
-  marginRight: theme.spacing(8),
+  marginTop: theme.spacing(1),
   [theme.breakpoints.down('md')]: {
 
   }
@@ -32,7 +29,7 @@ const StyledMainContainer = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   overflow: 'hidden',
   padding: theme.spacing(4),
-  gap: theme.spacing(18),
+  gap: theme.spacing(12),
 }))
 
 export default function Page() {
@@ -70,25 +67,6 @@ export default function Page() {
     { icon: (<DynamoDbLogo />), title: 'DynamoDb' },
   ];
 
-  const { item1, item2, item3, item4 } = {
-    item1: [
-      { icon: (<ReactLogo />), title: 'React.js' },
-      { icon: (<NodeJsLogo />), title: 'Node.js' },
-    ],
-    item2: [
-      { icon: (<NextJsLogo />), title: 'Next.js' },
-      { icon: (<TypescriptLogo />), title: 'Typescript' },
-    ],
-    item3: [
-      { icon: (<JavascriptLogo />), title: 'Javascript' },
-      { icon: (<MongoDbLogo />), title: 'MongoDb' },
-    ],
-    item4: [
-      { icon: (<MySQLLogo />), title: 'MySQL' },
-      { icon: (<DynamoDbLogo />), title: 'DynamoDb' },
-    ],
-  }
-
   return (
     <StyledMainContainer>
       <Slide in={checked} direction='left' timeout={1000}>
@@ -99,18 +77,21 @@ export default function Page() {
           <Typography variant='body1'>
             My expertise
           </Typography>
-          <StyledBoxContainer display='flex' flexDirection='row'>
+          <StyledGridContainer container justifyContent='center' spacing={12} marginBottom={16}>
             {specialties.map((e, i) => (
-              <React.Fragment key={`${i}-specialty-container`}>
+              <Grid item xs={12} sm={6} md={4} key={`${i}-specialty-container`}>
                 <Specialty key={`${i}-specialty`} {...e} />
                 {(i < specialties.length - 1) && <Divider key={`${i}-specialty-divider`} style={{ height: '50%' }} variant='middle' orientation='vertical' />}
-              </React.Fragment>
+              </Grid>
             ))}
-          </StyledBoxContainer>
+          </StyledGridContainer>
         </Box>
       </Slide>
       <Slide in={checked} direction='right' timeout={1000}>
-        <Box gap={40} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+        <Box gap={28} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+          <Typography variant='h4' fontWeight='bold'>
+            Technologies
+          </Typography>
           <Box gap={60} display='flex' justifyContent='center' flexDirection='row' alignItems='center'>
             <SkillSetColumnItem items={techList} />
           </Box>

@@ -16,6 +16,8 @@ interface SkillSetColumnItemProps {
 }
 
 
+
+
 export const Specialty = ({ icon, title, message }: SpecialtyProps) => {
   return (
     <Box display='flex' flexDirection='column' gap={12} alignItems='center'>
@@ -27,7 +29,7 @@ export const Specialty = ({ icon, title, message }: SpecialtyProps) => {
           {title}
         </Typography>
       </Box>
-      <Box width={300} height={100}>
+      <Box maxWidth={300} height={100}>
         <Typography color='grey'>
           {message}
         </Typography>
