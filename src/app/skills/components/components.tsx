@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 interface SpecialtyProps {
   icon: any;
@@ -38,21 +38,23 @@ export const Specialty = ({ icon, title, message }: SpecialtyProps) => {
 
 export const SkillSetItem = ({ icon, title }: SkillSetItemProps) => {
   return (
-    <Box display='flex' flexDirection='row' alignItems='center'>
-      {icon}
-      <Typography marginLeft={8} variant='h6'>
-        {title}
-      </Typography>
-    </Box>
+    <Grid item xs={12} sm={6} md={3}>
+      <Box display='flex' flexDirection='row' alignItems='center' justifyContent='center'>
+        {icon}
+        <Typography marginLeft={8} variant='h6'>
+          {title}
+        </Typography>
+      </Box>
+    </Grid>
   )
 }
 
 export const SkillSetColumnItem = ({ items }: SkillSetColumnItemProps) => {
   return (
-    <Box display='flex' flexDirection='column' gap={4}>
+    <Grid container spacing={8} marginBottom={8}>
       {items.map((e, i) => (
         <SkillSetItem key={`${i}-skill-set-item`} {...e} />
       ))}
-    </Box>
+    </Grid>
   )
 }

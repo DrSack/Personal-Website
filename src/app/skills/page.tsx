@@ -59,6 +59,17 @@ export default function Page() {
     }
   ];
 
+  const techList = [
+    { icon: (<ReactLogo />), title: 'React.js' },
+    { icon: (<NodeJsLogo />), title: 'Node.js' },
+    { icon: (<NextJsLogo />), title: 'Next.js' },
+    { icon: (<TypescriptLogo />), title: 'Typescript' },
+    { icon: (<JavascriptLogo />), title: 'Javascript' },
+    { icon: (<MongoDbLogo />), title: 'MongoDb' },
+    { icon: (<MySQLLogo />), title: 'MySQL' },
+    { icon: (<DynamoDbLogo />), title: 'DynamoDb' },
+  ];
+
   const { item1, item2, item3, item4 } = {
     item1: [
       { icon: (<ReactLogo />), title: 'React.js' },
@@ -85,6 +96,9 @@ export default function Page() {
           <Typography variant='h3' fontWeight='bold'>
             /skills
           </Typography>
+          <Typography variant='body1'>
+            My expertise
+          </Typography>
           <StyledBoxContainer display='flex' flexDirection='row'>
             {specialties.map((e, i) => (
               <React.Fragment key={`${i}-specialty-container`}>
@@ -98,10 +112,7 @@ export default function Page() {
       <Slide in={checked} direction='right' timeout={1000}>
         <Box gap={40} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
           <Box gap={60} display='flex' justifyContent='center' flexDirection='row' alignItems='center'>
-            <SkillSetColumnItem items={item1} />
-            <SkillSetColumnItem items={item2} />
-            <SkillSetColumnItem items={item3} />
-            <SkillSetColumnItem items={item4} />
+            <SkillSetColumnItem items={techList} />
           </Box>
         </Box>
       </Slide>
