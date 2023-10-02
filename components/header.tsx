@@ -3,6 +3,34 @@
 import { Box, IconButton, Toolbar, Typography } from '@mui/material';
 import { TextSnippet } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
+import { styled } from '@mui/material/styles';
+
+const StyledTitleTypography = styled(Typography)(({ theme }) => ({
+  ...theme.typography['h6'],
+  [theme.breakpoints.down('md')]: {
+    ...theme.typography['body1'],
+  },
+  [theme.breakpoints.down('sm')]: {
+    ...theme.typography['body2'],
+  },
+  [theme.breakpoints.down('xs')]: {
+    ...theme.typography['subtitle1'],
+  }
+}));
+
+const StyledLinksTypography = styled(Typography)(({ theme }) => ({
+  cursor: 'pointer',
+  color: 'black',
+  [theme.breakpoints.down('md')]: {
+    ...theme.typography['body1'],
+  },
+  [theme.breakpoints.down('sm')]: {
+    ...theme.typography['body2'],
+  },
+  [theme.breakpoints.down('xs')]: {
+    ...theme.typography['subtitle1'],
+  }
+}));
 
 export const Header = () => {
   const router = useRouter();
@@ -10,21 +38,21 @@ export const Header = () => {
   return (
     <Box>
       <Toolbar style={{ color: 'black', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Box onClick={() => router.push('/')} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
+        <Box gap={2} onClick={() => router.push('/')} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
           <TextSnippet />
-          <Typography variant="h6" sx={{ flexGrow: 1, marginLeft: '8px' }}>
+          <StyledTitleTypography sx={{ flexGrow: 1 }}>
             Travis Mangila
-          </Typography>
+          </StyledTitleTypography>
         </Box>
-        <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '270px', justifyContent: 'space-between' }}>
+        <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <IconButton href='/skills' size='medium'>
-            <Typography style={{ cursor: 'pointer', color: 'black' }}>Skills</Typography>
+            <StyledLinksTypography>Skills</StyledLinksTypography>
           </IconButton>
           <IconButton href='/work' size='medium'>
-            <Typography style={{ cursor: 'pointer', color: 'black' }}>My Work</Typography>
+            <StyledLinksTypography>My Work</StyledLinksTypography>
           </IconButton>
           <IconButton size='medium'>
-            <Typography style={{ cursor: 'pointer', color: 'black' }}>Contact</Typography>
+            <StyledLinksTypography>Contact</StyledLinksTypography>
           </IconButton>
         </Box>
       </Toolbar>
