@@ -40,7 +40,7 @@ const StyledDescriptionBox2 = styled(Box)(({ theme }) => ({
   gap: theme.spacing(8),
   width: '800px',
   [theme.breakpoints.down('md')]: {
-    marginTop: '36px',
+    marginTop: '0px',
     width: '100%',
   }
 }));

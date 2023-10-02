@@ -1,8 +1,6 @@
 'use client'
 
-import { Box, Divider, IconButton, Toolbar, Typography } from '@mui/material';
-import { TextSnippet } from '@mui/icons-material';
-import { useRouter } from 'next/navigation';
+import { Box, IconButton, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const StyledLinksTypography = styled(Typography)(({ theme }) => ({
@@ -17,13 +15,34 @@ const StyledTypographyCopyright = styled(Typography)(({ theme }) => ({
   ...theme.typography['body2'],
 }));
 
+const StyledUsefulLinksBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  height: '120px'
+}));
+
+const StyledContactsBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  height: '120px'
+}));
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  color: 'black',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+}));
+
 export const Footer = () => {
   return (
     <Box display='flex' flexDirection='column' justifyContent='space-around' style={{ width: '100%', backgroundColor: 'black', height: '320px' }}>
-      <Toolbar style={{ color: 'black', display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
-        <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '120px' }}>
+      <StyledToolbar>
+        <StyledUsefulLinksBox>
           <Typography variant='h6' color='white'>Useful Link</Typography>
-          <Box display='flex' flexDirection='column' justifyContent='space-around'  marginTop='32px'>
+          <Box display='flex' flexDirection='column' alignItems='center' marginTop='32px'>
             <IconButton href='/skills' size='medium'>
               <StyledLinksTypography>Skills</StyledLinksTypography>
             </IconButton>
@@ -34,15 +53,21 @@ export const Footer = () => {
               <StyledLinksTypography>Contact</StyledLinksTypography>
             </IconButton>
           </Box>
-        </Box>
-        <Box display='flex' flexDirection='column' alignItems='center' height='120px'>
+        </StyledUsefulLinksBox>
+        <StyledContactsBox>
           <Typography variant='h6' color='white'>Contacts</Typography>
-          <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '32px' }}>
-            <StyledLinksTypography>email: tem4912@gmail.com</StyledLinksTypography>
-            <StyledLinksTypography>phone: tem4912@gmail.com</StyledLinksTypography>
+          <Box style={{ display: 'flex', flexDirection: 'column', marginTop: '32px' }}>
+            <Box display='flex' flexDirection='row' justifyContent='space-between'>
+              <StyledLinksTypography>email:</StyledLinksTypography>
+              <StyledLinksTypography marginLeft={2}>tem4912@gmail.com</StyledLinksTypography>
+            </Box>
+            <Box display='flex' flexDirection='row' justifyContent='space-between'>
+              <StyledLinksTypography>phone:</StyledLinksTypography>
+              <StyledLinksTypography>0410049944</StyledLinksTypography>
+            </Box>
           </Box>
-        </Box>
-      </Toolbar>
+        </StyledContactsBox>
+      </StyledToolbar>
       <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
         <StyledTypographyCopyright>Copyright 2023 Travis Mangila</StyledTypographyCopyright>
       </Box>
