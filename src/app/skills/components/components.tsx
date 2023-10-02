@@ -50,8 +50,8 @@ export const SkillSetItem = ({ icon, title }: SkillSetItemProps) => {
 export const SkillSetColumnItem = ({ items }: SkillSetColumnItemProps) => {
   return (
     <Box display='flex' flexDirection='column' gap={4}>
-      {items.map(e => (
-        <SkillSetItem {...e} />
+      {items.map((e, i) => (
+        <SkillSetItem key={`${i}-skill-set-item`} {...e} />
       ))}
     </Box>
   )

@@ -17,11 +17,11 @@ export const Header = () => {
           </Typography>
         </Box>
         <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '270px', justifyContent: 'space-between' }}>
-          <IconButton href='/about' size='medium'>
-            <Typography style={{ cursor: 'pointer', color: 'black' }}>About</Typography>
+          <IconButton href='/skills' size='medium'>
+            <Typography style={{ cursor: 'pointer', color: 'black' }}>Skills</Typography>
           </IconButton>
-          <IconButton size='medium'>
-            <Typography style={{ cursor: 'pointer', color: 'black' }}>Work</Typography>
+          <IconButton href='/work' size='medium'>
+            <Typography style={{ cursor: 'pointer', color: 'black' }}>My Work</Typography>
           </IconButton>
           <IconButton size='medium'>
             <Typography style={{ cursor: 'pointer', color: 'black' }}>Contact</Typography>

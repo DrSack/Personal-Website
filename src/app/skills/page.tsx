@@ -2,6 +2,7 @@
 
 import { Build, FormatPaint, ViewQuilt } from "@mui/icons-material";
 import { Box, Divider, Slide, styled, Typography } from "@mui/material"
+import React from "react";
 import { useEffect, useState } from "react";
 import { DynamoDbLogo } from "../../../components/customIcons/DynamoDbLogo";
 import { JavascriptLogo } from "../../../components/customIcons/JavascriptLogo";
@@ -82,21 +83,21 @@ export default function Page() {
       <Slide in={checked} direction='left' timeout={1000}>
         <Box display='flex' justifyContent='space-between' flexDirection='column' alignItems='center' marginTop={12}>
           <Typography variant='h3' fontWeight='bold'>
-            Skill Sets
+            /skills
           </Typography>
           <StyledBoxContainer display='flex' flexDirection='row'>
             {specialties.map((e, i) => (
-              <>
+              <React.Fragment key={`${i}-specialty-container`}>
                 <Specialty key={`${i}-specialty`} {...e} />
                 {(i < specialties.length - 1) && <Divider key={`${i}-specialty-divider`} style={{ height: '50%' }} variant='middle' orientation='vertical' />}
-              </>
+              </React.Fragment>
             ))}
           </StyledBoxContainer>
         </Box>
       </Slide>
       <Slide in={checked} direction='right' timeout={1000}>
-        <Box gap={40} display='flex' justifyContent='space-between' flexDirection='column' alignItems='center'>
-          <Box gap={40} width='70%' display='flex' justifyContent='space-between' flexDirection='row' alignItems='center'>
+        <Box gap={40} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+          <Box gap={60} display='flex' justifyContent='center' flexDirection='row' alignItems='center'>
             <SkillSetColumnItem items={item1} />
             <SkillSetColumnItem items={item2} />
             <SkillSetColumnItem items={item3} />

@@ -1,19 +1,20 @@
 'use client';
 
 import { Avatar, Box, Button, IconButton, Slide, Typography } from '@mui/material'
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { FiverrLogo, LinkedInLogo } from '../../components/customIcons/index';
 
 const StyledBoxContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
-  flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
   gap: theme.spacing(30),
   height: '75vh',
   [theme.breakpoints.down('md')]: {
-
+    gap: theme.spacing(15),
+    flexDirection: 'column-reverse',
+    height: '100%',
   }
 }));
 
@@ -21,35 +22,28 @@ const StyledDescriptionBox1 = styled(Box)(({ theme }) => ({
 
 }));
 
-
 const StyledDescriptionBox2 = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  width: '800px',
   marginTop: '36px',
   gap: theme.spacing(8),
+  width: '800px',
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+  }
 }));
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 240,
   height: 240,
   [theme.breakpoints.down('md')]: {
-    width: 120,
-    height: 120,
+    width: 200,
+    height: 200,
   }
 }));
 
-const StyledTypography1 = styled(Typography)(({ theme }) => ({
-  marginTop: theme.spacing(8),
-  fontWeight: 'bold',
-}));
-
-const StyledTypography2 = styled(Typography)(() => ({
-  color: 'grey'
-}));
-
 const StyledButton = styled(Button)(({ theme }) => ({
-  width: theme.spacing(32),
+  width: theme.spacing(30),
   textTransform: 'none',
 }))
 
@@ -60,6 +54,22 @@ const StyledMainContainer = styled(Box)(({ theme }) => ({
   gap: theme.spacing(30),
   padding: theme.spacing(4)
 }))
+
+const StyledTypography1 = styled(Typography)(({ theme }) => ({
+  marginTop: theme.spacing(8),
+  fontWeight: 'bold',
+  [theme.breakpoints.down('md')]: {
+    ...theme.typography['h3'],
+    fontWeight: 'bold',
+  }
+}));
+
+const StyledTypography2 = styled(Typography)(({ theme }) => ({
+  color: 'grey',
+  [theme.breakpoints.down('md')]: {
+    ...theme.typography['body1'],
+  }
+}));
 
 export default function Page() {
   const [checked, setChecked] = useState(false);
@@ -78,13 +88,13 @@ export default function Page() {
           <StyledDescriptionBox2>
             <StyledTypography1 variant='h2'>Hi, Let's get Developing</StyledTypography1>
             <StyledTypography2 variant='h6'>
-              I'm a developer based in Australia. I'm here to solve your business needs and implement strategies to accomplish your entrepreneurship goals.
+              I'm a full-stack developer based in Australia. I'm here to solve your business needs and implement strategies to accomplish your entrepreneurship goals.
             </StyledTypography2>
             <Box display='flex' gap={4}>
               <StyledButton variant='contained'>
                 Contact Me!
               </StyledButton>
-              <StyledButton href='/about' variant='outlined'>
+              <StyledButton href='/skills' variant='outlined'>
                 Specialties
               </StyledButton>
             </Box>
