@@ -48,9 +48,6 @@ const StyledHeaderMobile = styled(Box)(({ theme }) => ({
 
 export const Header = () => {
   const router = useRouter();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   const [open, setOpen] = useState(false);
 
   return (
