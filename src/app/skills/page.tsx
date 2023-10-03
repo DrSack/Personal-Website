@@ -77,7 +77,7 @@ export default function Page() {
           <Typography variant='body1'>
             My expertise
           </Typography>
-          <StyledGridContainer container justifyContent='center' spacing={12} marginBottom={16}>
+          <StyledGridContainer container justifyContent='center' spacing={12} marginBottom={4}>
             {specialties.map((e, i) => (
               <Grid item xs={12} sm={6} md={4} key={`${i}-specialty-container`}>
                 <Specialty key={`${i}-specialty`} {...e} />
@@ -88,7 +88,7 @@ export default function Page() {
         </Box>
       </Slide>
       <Slide in={checked} direction='right' timeout={1000}>
-        <Box gap={28} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+        <Box gap={20} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
           <Typography variant='h4' fontWeight='bold'>
             Technologies
           </Typography>
