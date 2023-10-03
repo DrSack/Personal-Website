@@ -34,6 +34,18 @@ const StyledLinksTypography = styled(Typography)(({ theme }) => ({
   }
 }));
 
+const StyledHeaderDesktop = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.up('md')]: {
+    display: 'none',
+  },
+}));
+
+const StyledHeaderMobile = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
+  },
+}));
+
 export const Header = () => {
   const router = useRouter();
   const theme = useTheme();
@@ -43,8 +55,7 @@ export const Header = () => {
 
   return (
     <>
-      {isMobile ?
-        (<Box marginBottom={12}>
+        <StyledHeaderDesktop marginBottom={12}>
           <AppBar>
             <Toolbar style={{ backgroundColor: 'white', color: 'black' }}>
               <IconButton
@@ -69,10 +80,8 @@ export const Header = () => {
           >
             This will be filled information later
           </Drawer>
-        </Box>)
-        :
-        (
-          <Box padding={2}>
+        </StyledHeaderDesktop>
+          <StyledHeaderMobile padding={2}>
             <Toolbar style={{ color: 'black', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
               <Box gap={2} onClick={() => router.push('/')} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}>
                 <TextSnippet />
@@ -92,7 +101,7 @@ export const Header = () => {
                 </IconButton>
               </Box>
             </Toolbar>
-          </Box>)}
+          </StyledHeaderMobile>
     </>
   )
 }
