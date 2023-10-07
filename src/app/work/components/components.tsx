@@ -45,7 +45,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
     maxWidth: 350,
   },
   [theme.breakpoints.down('sm')]: {
-    minWidth: 350,
+    minWidth: 300,
   }
 }))
 
@@ -55,7 +55,7 @@ export const CardSelectable = ({ image, alt, title, message, onClick }: CardSele
       <CardActionArea onClick={onClick}>
         <CardMedia
           component="img"
-          height="140"
+          height="300px"
           image={image}
           alt={alt}
         />

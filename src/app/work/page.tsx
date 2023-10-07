@@ -21,38 +21,38 @@ export default function Page() {
 
   const workList: CardSelectableProps[] = [
     {
-      image: '',
+      image: '/companies/NOSIM.png',
       alt: 'NOSIM',
       title: 'NOSIM',
-      message: 'message',
+      message: 'Co-Founder of NOSIM PTY LTD',
       onClick: () => { }
     },
     {
-      image: '',
-      alt: 'NOSIM',
-      title: 'NOSIM',
-      message: 'message',
+      image: '/companies/FLIGHT-CENTRE.png',
+      alt: 'Flight Centre',
+      title: 'Flight Centre',
+      message: 'Full-Stack Developer',
       onClick: () => { }
     },
     {
-      image: '',
-      alt: 'NOSIM',
-      title: 'NOSIM',
-      message: 'message',
+      image: '/companies/AUXITA.png',
+      alt: 'Auxita',
+      title: 'Auxita',
+      message: 'Software Engineer',
       onClick: () => { }
     },
     {
-      image: '',
-      alt: 'NOSIM',
-      title: 'NOSIM',
-      message: 'message',
+      image: '/companies/BCTPA.png',
+      alt: 'BCTPA',
+      title: 'BCTPA',
+      message: 'Full-Stack Developer',
       onClick: () => { }
     },
     {
-      image: '',
-      alt: 'NOSIM',
-      title: 'NOSIM',
-      message: 'message',
+      image: '/companies/DNRME.png',
+      alt: 'DNRME',
+      title: 'DNRME',
+      message: 'Software Developer',
       onClick: () => { }
     }
   ]

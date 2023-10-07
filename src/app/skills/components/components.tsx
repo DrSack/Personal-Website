@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { styled } from '@mui/material/styles';
 
 interface SpecialtyProps {
   icon: any;
@@ -15,19 +16,22 @@ interface SkillSetColumnItemProps {
   items: SkillSetItemProps[];
 }
 
-
+const StyledTypographySpecialty = styled(Typography)(({ theme }) => ({
+...theme.typography['h5'],
+fontWeight: 'bolder'
+}))
 
 
 export const Specialty = ({ icon, title, message }: SpecialtyProps) => {
   return (
-    <Box display='flex' flexDirection='column' gap={12} alignItems='center'>
+    <Box display='flex' flexDirection='column' justifyContent='center' gap={12} alignItems='center'>
       <Box display='flex' flexDirection='column' gap={12} justifyContent='space-between' alignItems='center'>
         <Box>
           {icon}
         </Box>
-        <Typography variant='h4'>
+        <StyledTypographySpecialty variant='h4'>
           {title}
-        </Typography>
+        </StyledTypographySpecialty>
       </Box>
       <Box maxWidth={300} height={100}>
         <Typography color='grey'>

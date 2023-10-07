@@ -77,7 +77,7 @@ export default function Page() {
           <Typography variant='body1'>
             My expertise
           </Typography>
-          <StyledGridContainer container justifyContent='center' spacing={12} marginBottom={4}>
+          <StyledGridContainer container justifyContent='center' paddingLeft={4} spacing={12} marginBottom={4}>
             {specialties.map((e, i) => (
               <Grid item xs={12} sm={6} md={4} key={`${i}-specialty-container`}>
                 <Specialty key={`${i}-specialty`} {...e} />

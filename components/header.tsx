@@ -4,7 +4,7 @@ import { AppBar, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListIt
 import { TextSnippet } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/navigation';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 
 const StyledTitleTypography = styled(Typography)(({ theme }) => ({
