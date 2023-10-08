@@ -93,7 +93,7 @@ export const Header = () => {
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton href='/contact'>
                   <ListItemText primary='Contact' />
                 </ListItemButton>
               </ListItem>
@@ -116,7 +116,7 @@ export const Header = () => {
             <IconButton href='/work' size='medium'>
               <StyledLinksTypography>My Work</StyledLinksTypography>
             </IconButton>
-            <IconButton size='medium'>
+            <IconButton href='/contact' size='medium'>
               <StyledLinksTypography>Contact</StyledLinksTypography>
             </IconButton>
           </Box>

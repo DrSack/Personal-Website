@@ -19,9 +19,6 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   flexDirection: 'row',
   alignItems: 'center',
   marginTop: theme.spacing(1),
-  [theme.breakpoints.down('md')]: {
-
-  }
 }));
 
 const StyledMainContainer = styled(Box)(({ theme }) => ({
