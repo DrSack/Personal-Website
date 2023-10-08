@@ -63,7 +63,7 @@ export const Footer = () => {
             </Box>
             <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>
               <StyledLinksTypography>phone:</StyledLinksTypography>
-              <StyledLinksTypography>0406650615</StyledLinksTypography>
+              <StyledLinksTypography>+61406650615</StyledLinksTypography>
             </Box>
           </Box>
         </StyledContactsBox>
