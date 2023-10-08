@@ -16,10 +16,10 @@ export async function POST(req: Request) {
     }).then(e => e.json())
 
     if (web3Response.success) {
-      return NextResponse.json({ data: "/api/submitContact" }, { status: 200 });
+      return NextResponse.json({ success: true }, { status: 200 });
     } else throw new Error(web3Response.message);
   } catch (e: any) {
     console.error('ERROR: ', e)
-    return NextResponse.json({ message: e.message }, { status: 500 });
+    return NextResponse.json({ success: false, message: e.message }, { status: 500 });
   }
 }

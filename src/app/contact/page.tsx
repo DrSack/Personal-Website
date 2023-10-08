@@ -89,7 +89,7 @@ export default function Page() {
               /contact
             </Typography>
             <Typography variant='body1'>
-              If you need any help
+              Let's get started
             </Typography>
           </Box>
           <form onSubmit={onSubmit}>
