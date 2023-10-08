@@ -111,7 +111,7 @@ export default function Page() {
               I'm a full-stack developer based in Australia. I'm here to solve your business needs and implement strategies to accomplish your entrepreneurship goals.
             </StyledTypography2>
             <Box display='flex' gap={4}>
-              <StyledButton variant='contained'>
+              <StyledButton href='/contact' variant='contained'>
                 Contact Me!
               </StyledButton>
               <StyledButton href='/skills' variant='outlined'>

@@ -17,9 +17,9 @@ export async function POST(req: Request) {
 
     if (web3Response.success) {
       return NextResponse.json({ data: "/api/submitContact" }, { status: 200 });
-    } else throw new Error();
-  } catch (e) {
+    } else throw new Error(web3Response.message);
+  } catch (e: any) {
     console.error('ERROR: ', e)
-    return NextResponse.json({ message: 'There was a problem sending your request' }, { status: 500 });
+    return NextResponse.json({ message: e.message }, { status: 500 });
   }
 }
