@@ -3,7 +3,7 @@
 import { Avatar, Box, Button, IconButton, Slide, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
-import { FiverrLogo, LinkedInLogo } from '../../components/customIcons/index';
+import { FiverrLogo, GitHubLogo, LinkedInLogo } from '../../components/customIcons/index';
 
 const StyledBoxContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -126,8 +126,11 @@ export default function Page() {
                 <IconButton target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/leuk-travis-mangila/' >
                   <LinkedInLogo />
                 </IconButton>
-                <IconButton target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/leuk-travis-mangila/' >
+                <IconButton target="_blank" rel="noopener noreferrer" href='https://www.fiverr.com/travis_mangila/make-a-web-application-for-your-business-needs' >
                   <FiverrLogo />
+                </IconButton>
+                <IconButton target="_blank" rel="noopener noreferrer" href='https://github.com/DrSack' >
+                  <GitHubLogo />
                 </IconButton>
               </Box>
             </Box>

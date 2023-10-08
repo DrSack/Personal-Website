@@ -8,3 +8,4 @@ export * from './JavascriptLogo';
 export * from './MongoDbLogo';
 export * from './MySQLLogo';
 export * from './DynamoDbLogo';
+export * from './GitHubLogo';
