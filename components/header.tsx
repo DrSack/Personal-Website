@@ -110,6 +110,9 @@ export const Header = () => {
             </StyledTitleTypography>
           </Box>
           <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <IconButton href='/' size='medium'>
+              <StyledLinksTypography>Home</StyledLinksTypography>
+            </IconButton>
             <IconButton href='/skills' size='medium'>
               <StyledLinksTypography>Skills</StyledLinksTypography>
             </IconButton>
