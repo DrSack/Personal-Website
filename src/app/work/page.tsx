@@ -42,9 +42,9 @@ export default function Page() {
       onClick: () => { }
     },
     {
-      image: '/companies/BCTPA.png',
-      alt: 'BCTPA',
-      title: 'BCTPA',
+      image: '/companies/BCPTA.png',
+      alt: 'BCPTA',
+      title: 'BCPTA',
       message: 'Full-Stack Developer',
       onClick: () => { }
     },

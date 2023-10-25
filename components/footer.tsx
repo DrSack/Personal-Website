@@ -41,7 +41,7 @@ export const Footer = () => {
     <Box display='flex' flexDirection='column' justifyContent='space-around' style={{ width: '100%', backgroundColor: 'black', height: '320px' }}>
       <StyledToolbar>
         <StyledUsefulLinksBox>
-          <Typography variant='h6' color='white'>Useful Link</Typography>
+          <Typography variant='h6' color='white'>Useful Links</Typography>
           <Box display='flex' flexDirection='column' alignItems='center' marginTop='32px'>
             <IconButton href='/skills' size='medium'>
               <StyledLinksTypography>Skills</StyledLinksTypography>
