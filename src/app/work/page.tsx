@@ -24,7 +24,7 @@ export default function Page() {
       image: '/companies/NOSIM.png',
       alt: 'NOSIM',
       title: 'NOSIM',
-      message: 'Co-Founder of NOSIM PTY LTD',
+      message: 'Developer',
       onClick: () => { }
     },
     {
