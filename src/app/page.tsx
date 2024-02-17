@@ -126,9 +126,6 @@ export default function Page() {
                 <IconButton target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/leuk-travis-mangila/' >
                   <LinkedInLogo />
                 </IconButton>
-                <IconButton target="_blank" rel="noopener noreferrer" href='https://www.fiverr.com/travis_mangila/make-a-web-application-for-your-business-needs' >
-                  <FiverrLogo />
-                </IconButton>
                 <IconButton target="_blank" rel="noopener noreferrer" href='https://github.com/DrSack' >
                   <GitHubLogo />
                 </IconButton>
