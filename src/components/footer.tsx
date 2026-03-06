@@ -61,10 +61,6 @@ export const Footer = () => {
               <StyledLinksTypography>email:</StyledLinksTypography>
               <Typography color='#D3D3D3' fontSize='11px' marginLeft={2}>travismangila.business@gmail.com</Typography>
             </Box>
-            <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>
-              <StyledLinksTypography>phone:</StyledLinksTypography>
-              <StyledLinksTypography>+61406650615</StyledLinksTypography>
-            </Box>
           </Box>
         </StyledContactsBox>
       </StyledToolbar>
