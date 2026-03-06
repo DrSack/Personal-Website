@@ -4,14 +4,14 @@ import { Build, FormatPaint, ViewQuilt } from "@mui/icons-material";
 import { Box, Divider, Grid, Slide, styled, Typography } from "@mui/material"
 import React from "react";
 import { useEffect, useState } from "react";
-import { DynamoDbLogo } from "../../../components/customIcons/DynamoDbLogo";
-import { JavascriptLogo } from "../../../components/customIcons/JavascriptLogo";
-import { MongoDbLogo } from "../../../components/customIcons/MongoDbLogo";
-import { MySQLLogo } from "../../../components/customIcons/MySQLLogo";
-import { NextJsLogo } from "../../../components/customIcons/NextJsLogo";
-import { NodeJsLogo } from "../../../components/customIcons/NodeJsLogo";
-import { ReactLogo } from "../../../components/customIcons/ReactLogo";
-import { TypescriptLogo } from "../../../components/customIcons/TypescriptLogo";
+import { DynamoDbLogo } from "../../components/customIcons/DynamoDbLogo";
+import { JavascriptLogo } from "../../components/customIcons/JavascriptLogo";
+import { MongoDbLogo } from "../../components/customIcons/MongoDbLogo";
+import { MySQLLogo } from "../../components/customIcons/MySQLLogo";
+import { NextJsLogo } from "../../components/customIcons/NextJsLogo";
+import { NodeJsLogo } from "../../components/customIcons/NodeJsLogo";
+import { ReactLogo } from "../../components/customIcons/ReactLogo";
+import { TypescriptLogo } from "../../components/customIcons/TypescriptLogo";
 import { SkillSetColumnItem, Specialty } from "./components/components";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({

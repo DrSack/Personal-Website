@@ -3,7 +3,7 @@
 import { Avatar, Box, Button, IconButton, Slide, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
-import { FiverrLogo, GitHubLogo, LinkedInLogo } from '../../components/customIcons/index';
+import { FiverrLogo, GitHubLogo, LinkedInLogo } from '../components/customIcons/index';
 
 const StyledBoxContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
